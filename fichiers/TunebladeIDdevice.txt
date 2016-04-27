@@ -1,0 +1,6 @@
+PortTuneblade=40000
+IDBar=F4CAE5512C5F@FreeboxServer
+IDSalon=""
+IDCusine=1C2800D2F280@Cuisine
+IDSalledebain=""
+IDSalleamanger=""

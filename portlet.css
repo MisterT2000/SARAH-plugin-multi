@@ -1,0 +1,10 @@
+
+.plugin-gridster.multi .front {
+  background: #b80404 url('images/logo.png') center;
+  background-size:   160px 160px;
+  background-repeat: no-repeat;
+}
+
+.plugin-gridster.multi .back {
+  background: #FFFFFF;
+}

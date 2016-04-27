@@ -1,0 +1,8 @@
+{
+  "modules": { 
+    "multi": {
+      "description": "Multiroom airplay dlna via Tuneblade",
+      "version": "1.00"
+    }
+  }
+}

@@ -1,0 +1,130 @@
+	<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulemulti" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulemulti" scope="public">
+  
+    <example>Sarah quelle est la météo pour demain ?</example>
+    <tag>out.action=new Object(); </tag>
+	<tag>out._attributes.dictation="false";</tag>
+    <item>Jarviss</item>
+
+	<one-of>
+	<!-- commande de lancement et diffusion-->
+	  <item>tu ai la<tag>out.action.val="la"</tag></item>
+	  <item>lance</item>
+      <item>lance la musique</item>
+      <item>allume la musique</item>
+      <item>strim la musique</item>
+	  <item>diffuse la musique</item>  
+      <item>mai la musique</item>
+      <item>lance le son</item>
+      <item>strim le son</item>
+	  <item>diffuse le son</item>  
+      <item>mai le son</item>
+      <item>lance l'audio</item>
+      <item>mai l'audio</item>
+      <item>allume l'audio</item>
+	  
+	  <!-- commande darret et d arret de diffusion-->
+	  <item>arrette le multiroum<tag>out.action.val="stopmultiroom"</tag></item>
+      <item>stop le multiroum<tag>out.action.val="stopmultiroom"</tag></item>
+      <item>coupe le multiroum<tag>out.action.val="stopmultiroom"</tag></item>  
+	  
+	  <item>arrette le multiroum musical<tag>out.action.val="stopmultiroommusic"</tag></item>
+      <item>stop le multiroum musical<tag>out.action.val="stopmultiroommusic"</tag></item>
+      <item>coupe le multiroum musical<tag>out.action.val="stopmultiroommusic"</tag></item>
+	  
+	  <item>arrete la musique dans toute les pieces<tag>out.action.val="pauseall"</tag></item>
+	  <item>stop la musique dans toute les pieces<tag>out.action.val="pauseall"</tag></item> 
+	  
+	  <item>arrete la musique dans la cuisine<tag>out.action.val="stopcuisine"</tag></item>
+	  <item>stop la musique dans la cuisine<tag>out.action.val="stopcuisine"</tag></item>
+	  <item>arrete la musique dans le salon<tag>out.action.val="stopsalon"</tag></item>
+	  <item>stop la musique dans le salon<tag>out.action.val="stopsalon"</tag></item>
+	  <item>arrete la musique dans la salle de bain<tag>out.action.val="stopsalledebain"</tag></item>
+	  <item>stop la musique dans la salle de bain<tag>out.action.val="stopsalledebain"</tag></item>
+	  <item>arrete la musique au bar<tag>out.action.val="stopbar"</tag></item>
+	  <item>stop la musique au bar<tag>out.action.val="stopbar"</tag></item>
+	  <item>arrete la musique dans la chambre<tag>out.action.val="stopchambre"</tag></item>
+	  <item>stop la musique dans la chambre<tag>out.action.val="stopchambre"</tag></item>  
+    </one-of>
+
+
+	<item repeat="0-1">
+      <one-of>
+	  		<!-- demarre le programme-->
+			<item>le multiroum<tag>out.action.val="startmultiroom"</tag></item>	  							<!-- demarre le programme tuneblade-->
+			<item>le multiroum musical<tag>out.action.val="startmultiroommusic"</tag></item>		  		<!-- demarre le programme tuneblade et kodi-->
+	  
+			<!-- strim la musique dans la maison-->
+			<item>la cuisine<tag>out.action.val="playcuisine"</tag></item>
+			<item>la cuisine a di pour sans<tag>out.action.val="play10cuisine"</tag></item>
+			<item>la cuisine a vin pour sans<tag>out.action.val="play20cuisine"</tag></item>
+			<item>la cuisine a trente pour sans<tag>out.action.val="play30cuisine"</tag></item>
+			<item>la cuisine a quarante pour sans<tag>out.action.val="play40cuisine"</tag></item>
+			<item>la cuisine a cinquante pour sans<tag>out.action.val="play50cuisine"</tag></item>
+			<item>la cuisine a soixante pour sans<tag>out.action.val="play60cuisine"</tag></item>
+			<item>la cuisine a soissante di pour sans<tag>out.action.val="play70cuisine"</tag></item>
+			<item>la cuisine a quatre vingt pour sans<tag>out.action.val="play80cuisine"</tag></item>
+			<item>la cuisine a quatre vingt di pour sans<tag>out.action.val="play90cuisine"</tag></item>
+			<item>la cuisine a sans pour sans<tag>out.action.val="play100cuisine"</tag></item>
+			
+			<item>le salon<tag>out.action.val="playsalon"</tag></item>
+			<item>le salon a di pour sans<tag>out.action.val="play10salon"</tag></item>
+			<item>le salon a vin pour sans<tag>out.action.val="play20salon"</tag></item>
+			<item>le salon a trente pour sans<tag>out.action.val="play30salon"</tag></item>
+			<item>le salon a quarante pour sans<tag>out.action.val="play40salon"</tag></item>
+			<item>le salon a cinquante pour sans<tag>out.action.val="play50salon"</tag></item>
+			<item>le salon a soixante pour sans<tag>out.action.val="play60salon"</tag></item>
+			<item>le salon a soissante di pour sans<tag>out.action.val="play70salon"</tag></item>
+			<item>le salon a quatre vingt pour sans<tag>out.action.val="play80salon"</tag></item>
+			<item>le salon a quatre vingt di pour sans<tag>out.action.val="play90salon"</tag></item>
+			<item>le salon a sans pour sans<tag>out.action.val="play100salon"</tag></item>
+					
+			<item>la salle de bain<tag>out.action.val="playsalledebain"</tag></item>
+			<item>la salle de bain a di pour sans<tag>out.action.val="play10salledebain"</tag></item>
+			<item>la salle de bain a vin pour sans<tag>out.action.val="play20salledebain"</tag></item>
+			<item>la salle de bain a trente pour sans<tag>out.action.val="play30salledebain"</tag></item>
+			<item>la salle de bain a quarante pour sans<tag>out.action.val="play40salledebain"</tag></item>
+			<item>la salle de bain a cinquante pour sans<tag>out.action.val="play50salledebain"</tag></item>
+			<item>la salle de bain a soixante pour sans<tag>out.action.val="play60salledebain"</tag></item>
+			<item>la salle de bain a soissante di pour sans<tag>out.action.val="play70salledebain"</tag></item>
+			<item>la salle de bain a quatre vingt pour sans<tag>out.action.val="play80salledebain"</tag></item>
+			<item>la salle de bain a quatre vingt di pour sans<tag>out.action.val="play90salledebain"</tag></item>
+			<item>la salle de bain a sans pour sans<tag>out.action.val="play100salledebain"</tag></item>
+			
+			<item>la chambre<tag>out.action.val="playchambre"</tag></item>
+			<item>la chambre a di pour sans<tag>out.action.val="play10chambre"</tag></item>
+			<item>la chambre a vin pour sans<tag>out.action.val="play20chambre"</tag></item>
+			<item>la chambre a trente pour sans<tag>out.action.val="play30chambre"</tag></item>
+			<item>la chambre a quarante pour sans<tag>out.action.val="play40chambre"</tag></item>
+			<item>la chambre a cinquante pour sans<tag>out.action.val="play50chambre"</tag></item>
+			<item>la chambre a soixante pour sans<tag>out.action.val="play60chambre"</tag></item>
+			<item>la chambre a soissante di pour sans<tag>out.action.val="play70chambre"</tag></item>
+			<item>la chambre a quatre vingt pour sans<tag>out.action.val="play80chambre"</tag></item>
+			<item>la chambre a quatre vingt di pour sans<tag>out.action.val="play90chambre"</tag></item>
+			<item>la chambre a sans pour sans<tag>out.action.val="play100chambre"</tag></item>			
+
+			<item>le bar<tag>out.action.val="playbar"</tag></item>
+			<item>le bar a di pour sans<tag>out.action.val="play10bar"</tag></item>
+			<item>le bar a vin pour sans<tag>out.action.val="play20bar"</tag></item>
+			<item>le bar a trente pour sans<tag>out.action.val="play30bar"</tag></item>
+			<item>le bar a quarante pour sans<tag>out.action.val="play40bar"</tag></item>
+			<item>le bar a cinquante pour sans<tag>out.action.val="play50bar"</tag></item>
+			<item>le bar a soixante pour sans<tag>out.action.val="play60bar"</tag></item>
+			<item>le bar a soissante di pour sans<tag>out.action.val="play70bar"</tag></item>
+			<item>le bar a quatre vingt pour sans<tag>out.action.val="play80bar"</tag></item>
+			<item>le bar a quatre vingt di pour sans<tag>out.action.val="play90bar"</tag></item>
+			<item>le bar a sans pour sans<tag>out.action.val="play100bar"</tag></item>				
+			
+			<item>toutes les piaice<tag>out.action.val="playall"</tag></item>
+			<item>toute la maison<tag>out.action.val="playall"</tag></item>
+			<item>tout l'apparte<tag>out.action.val="playall"</tag></item>
+			<item>partout<tag>out.action.val="playall"</tag></item>
+      </one-of>
+    </item>
+	
+
+		  
+  
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/multi";</tag>
+  </rule> 
+</grammar>
